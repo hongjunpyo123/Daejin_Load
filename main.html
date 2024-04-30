@@ -18,6 +18,9 @@
             padding: 8px;
             background-color:cornflowerblue
         }
+        #go{
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -30,10 +33,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                <a class="nav-link active" aria-current="page" href="https://www.daejin.ac.kr/daejin/index.do">대진대학교</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">대진대학교</a>
+                <a class="nav-link" href="https://www.daejin.ac.kr/daejin/index.do">학교영상</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,17 +46,16 @@
                   <li><a class="dropdown-item" href="#">강의실</a></li>
                   <li><a class="dropdown-item" href="#">수강신청</a></li>
                   <li><a class="dropdown-item" href="#">학교지도</a></li>
+                  <li><a class="dropdown-item" href="#">학교건물</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="login.html">로그아웃</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
+              
             </ul>
             <form class="d-flex" role="search" method="get">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" name="search">GO!</button>
+              <button class="btn btn-outline-success" type="submit" name="search" id="go">GO!</button>
             </form>
           </div>
         </div>
