@@ -79,6 +79,10 @@
 </style>
 </head>
 <body>
+    <?php
+        
+    ?>
+    
     <form action="action_page.php" style="border:1px solid #ccc">
         <div class="container">
             <h1>회원가입</h1>
