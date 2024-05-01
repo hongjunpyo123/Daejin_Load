@@ -10,6 +10,12 @@
           background-repeat: no-repeat;
           background-size: cover;
         }
+        .map a{
+          text-decoration: none;
+          opacity: 0;
+          font-size: 17px;
+          text-align: center;
+        }
         .card_container{
           position: relative;
           display: flex;
@@ -29,7 +35,8 @@
         }
         .map{
           position: fixed;
-          top: 80px;
+          top: 50%;
+          transform: translate(0%,-50%);
           border: 8px solid rgb(63, 63, 63);
           width: 78vh;
           height: 60vh;
@@ -45,7 +52,173 @@
           height: 55px;
           width: 55px;
         }
-        @media (max-width: 1316px){
+        .circle{
+          opacity: 0;
+          position: absolute;
+          border-radius: 100%;
+          width: 4%;
+          height: 5.4%;
+          border: 2px solid orange;
+          background-color: rgba(183, 183, 237, 80%);
+        }
+        .circle:hover{
+          transition: opacity 0.3s ease-in-out;
+          opacity: 1;
+        }
+
+
+        #circle1{
+          position: relative;
+          top: 55.5%;
+          left: 14.8%;
+        }
+        #circle2{
+          position: relative;
+          top: 50%;
+          left: 16%;
+        }
+        #circle3{
+          position: relative;
+          top: 46.6%;
+          left: 12.6%;
+        }
+        #circle4{
+          position: relative;
+          top: 44.5%;
+          left: 6.5%;
+        }
+        #circle5{
+          position: relative;
+          top: 42.3%;
+          left: -0.7%;
+        }
+        #circle6{
+          top: 52.3%;
+          left: 40.8%;
+        }
+        #circle7{
+          top: 47.8%;
+          left: 36.7%;
+        }
+        #circle8{
+          top: 43.8%;
+          left: 33.6%;
+        }
+        #circle9{
+          top: 39.2%;
+          left: 30.3%;
+        }
+        #circle10{
+          top: 32.6%;
+          left: 24.52%;
+        }
+        #circle11{
+          top: 50.31%;
+          left: 55.07%;
+        }
+        #circle12{
+          top: 47.78%;
+          left: 47.67%;
+        }
+        #circle13{
+          top: 42.11%;
+          left: 48.32%;
+        }
+        #circle14{
+          top: 37.70%;
+          left: 45.10%;
+        }
+        #circle15{
+          top: 34.76%;
+          left: 41.72%;
+        }
+        #circle16{
+          top: 24.89%;
+          left: 40.92%;
+        }
+        #circle17{
+          top: 19.00%;
+          left: 36.74%;
+        }
+        #circle18{
+          top: 12.91%;
+          left: 32.40%;
+        }
+        #circle19{
+          top: 18.16%;
+          left: 51.85%;
+        }
+        #circle20{
+          top: 14.22%;
+          left: 48.64%;
+        }
+        #circle21{
+          top: 10.60%;
+          left: 46.23%;
+        }
+        #circle22{
+          top: 8.92%;
+          left: 40.28%;
+        }
+        #circle23{
+          top: 35.18%;
+          left: 53.62%;
+        }
+        #circle24{
+          top: 32.92%;
+          left: 59.19%;
+        }
+        #circle25{
+          top: 25.10%;
+          left: 56.03%;
+        }
+        #circle26{
+          top: 23.13%;
+          left: 62.14%;
+        }
+        #circle27{
+          top: 25.10%;
+          left: 64.72%;
+        }
+        #circle28{
+          top: 27.41%;
+          left: 67.13%;
+        }
+        #circle29{
+          top: 29.56%;
+          left: 65.36%;
+        }
+        #circle30{
+          top: 31.40%;
+          left: 68.09%;
+        }
+        #circle31{
+          top: 33.29%;
+          left: 70.5%;
+        }
+        #circle32{
+          top: 30.14%;
+          left: 84.81%;
+        }
+        #circle33{
+          top: 28.04%;
+          left: 79.32%;
+        }
+        #circle34{
+          top: 10.65%;
+          left: 69.54%;
+        }
+        #circle35{
+          top: 7.37%;
+          left: 66.2%;
+        }
+        #circle36{
+          top: 4.5%;
+          left: 63.61%;
+        }
+
+        
+        @media (max-width: 1230px){
           .map{
             display: none;
           }
@@ -54,7 +227,7 @@
             justify-content: center;
           }
         }
-        @media (max-height:823px){
+        @media (max-height:723px){
           .map{
             display: none;
           }
@@ -106,7 +279,43 @@
 
       <div class="map">
         <img src="img/" alt="">
-      </div>
+        <a href="building1.html1" class="circle_a"><button id="circle1" class="circle">1</a>
+        <a href="building1.html2" class="circle_a"><button id="circle2" class="circle">2</a>
+        <a href="building1.html3" class="circle_a"><button id="circle3" class="circle">3</a>
+        <a href="building1.html4" class="circle_a"><button id="circle4" class="circle">4</a>        
+        <a href="building1.html5" class="circle_a"><button id="circle5" class="circle">5</a>
+        <a href="building1.html6" class="circle_a"><button id="circle6" class="circle">6</a>
+        <a href="building1.html7" class="circle_a"><button id="circle7" class="circle">7</a>
+        <a href="building1.html8" class="circle_a"><button id="circle8" class="circle">8</a>
+        <a href="building1.html9" class="circle_a"><button id="circle9" class="circle">9</a>
+        <a href="building1.html10" class="circle_a"><button id="circle10" class="circle">10</a>        
+        <a href="building1.html11" class="circle_a"><button id="circle11" class="circle">11</a>
+        <a href="building1.html12" class="circle_a"><button id="circle12" class="circle">12</a>    
+        <a href="building1.html13" class="circle_a"><button id="circle13" class="circle">13</a>
+        <a href="building1.html14" class="circle_a"><button id="circle14" class="circle">14</a>
+        <a href="building1.html15" class="circle_a"><button id="circle15" class="circle">15</a>
+        <a href="building1.html16" class="circle_a"><button id="circle16" class="circle">16</a>        
+        <a href="building1.html17" class="circle_a"><button id="circle17" class="circle">17</a>
+        <a href="building1.html18" class="circle_a"><button id="circle18" class="circle">18</a>
+        <a href="building1.html19" class="circle_a"><button id="circle19" class="circle">19</a>
+        <a href="building1.html20" class="circle_a"><button id="circle20" class="circle">20</a>
+        <a href="building1.html21" class="circle_a"><button id="circle21" class="circle">21</a>
+        <a href="building1.html22" class="circle_a"><button id="circle22" class="circle">22</a>        
+        <a href="building1.html23" class="circle_a"><button id="circle23" class="circle">23</a>
+        <a href="building1.html24" class="circle_a"><button id="circle24" class="circle">24</a>
+        <a href="building1.html25" class="circle_a"><button id="circle25" class="circle">25</a>
+        <a href="building1.html26" class="circle_a"><button id="circle26" class="circle">26</a>
+        <a href="building1.html27" class="circle_a"><button id="circle27" class="circle">27</a>
+        <a href="building1.html28" class="circle_a"><button id="circle28" class="circle">28</a>        
+        <a href="building1.html29" class="circle_a"><button id="circle29" class="circle">29</a>
+        <a href="building1.html30" class="circle_a"><button id="circle30" class="circle">30</a>
+        <a href="building1.html31" class="circle_a"><button id="circle31" class="circle">31</a>
+        <a href="building1.html32" class="circle_a"><button id="circle32" class="circle">32</a>
+        <a href="building1.html33" class="circle_a"><button id="circle33" class="circle">33</a>
+        <a href="building1.html34" class="circle_a"><button id="circle34" class="circle">34</a>        
+        <a href="building1.html35" class="circle_a"><button id="circle35" class="circle">35</a>
+        <a href="building1.html36" class="circle_a"><button id="circle36" class="circle">36</a> 
+        </div>
 
 <div class="card_container">
 
