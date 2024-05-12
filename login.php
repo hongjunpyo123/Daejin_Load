@@ -15,7 +15,7 @@ include 'conn.php';
             exit;
         }
         if($count==0){
-            echo "<script>alert('아이디나 비밀번호가 틀렸습니다')</script>";
+            echo "<script>alert('아이디 또는 비밀번호가 일치하지 않습니다')</script>";
             echo "<script>location.href='login.html';</script>";
         }else{
             echo "<script>alert('로그인 성공')</script>";
