@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    * {box-sizing: border-box}
-
-    
+    * {
+        box-sizing: border-box
+    }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -51,6 +51,7 @@
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 5px;
     }
 
     button:hover {
@@ -60,8 +61,9 @@
 
     .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: gray;
     }
+    
 
 
     .signupbtn {
@@ -86,10 +88,18 @@
     display: table;
     }
 
+    #email,#password,#num,#name{
+        transition: background-color 0.5s ease-in-out;
+    }
+    #email:hover,#password:hover,#num:hover,#name:hover{
+        transition: background-color 0.5s ease-in-out;
+        background-color: antiquewhite;
+    }
 
     @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
         width: 100%;
+
     }
     }
 
@@ -106,6 +116,7 @@
         border-radius: 15px;
         margin-top: 15px;
     }
+
     </style>
 </head>
 
@@ -114,30 +125,26 @@
 
         <div class="container">
             <h1>회원가입</h1>
-            <p>빈칸을 채워주세요.</p>
             <hr>
                 <div clasa = "email">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="email"><b>이메일</b></label>
+                <input id="email" type="text" placeholder="이메일 입력" name="email" required>
                 </div>
                 <div class = "id">
                 <label for="num"><b>학번</b></label>
-                <input type="text" placeholder="학번 입력" name="num" required>
+                <input id="num" type="text" placeholder="학번 입력" name="num" required>
                 </div>
-                <div class="pwd">
-                <label for="pwd"><b>비밀번호</b></label>
-                <input type="password" placeholder="Enter Password" name="pwd" required>
+                <div class="password">
+                <label for="password"><b>비밀번호</b></label>
+                <input id="password" type="password" placeholder="비밀번호 입력" name="password" required>
                 </div>
                 <div class="name">
                 <label for="name"><b>이름</b></label>
-                <input type="text" placeholder="이름 입력" name="name" required>
+                <input id="name" type="text" placeholder="이름 입력" name="name" required>
                 </div>    
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                </label>
                 <div class="clearfix">
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">확인</button>
+                    <a href="login.html"><button type="button" class="cancelbtn">취소</button></a>
                 </div>
         </div>
       </form>

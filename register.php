@@ -1,21 +1,28 @@
 <?php
+session_start();
 include_once("conn.php");
-
 $email = $_POST['email'] ?? 0;
 $num = $_POST['num'] ?? 0;
-$pwd = $_POST['pwd'] ?? 0;
+$password = $_POST['password'] ?? 0;
 $name = $_POST['name'] ?? 0;
 $today = date("Y/m/d") ?? 0; //컴퓨터의 현재 날짜 년/월/일 형식으로 읽어오기
-$sql = "insert into userinfo values('$email','$num','$pwd','$name','$today')";
+
+
+$sql = "insert into userinfo values('$email','$num','$password','$name','$today')";
 if($conn->query($sql)){
-    //echo "회원등록 성공<br>";
-    #페이지 이동하기
-    //header("Location:index.html");
-    echo "<script>alert('회원가입 성공');</script>";
-    echo "<script>location.href='main.html';</script>";
-    }
+    $sql = "SELECT * FROM userinfo WHERE email ='$email' AND password = '$password'";
+    $result = $conn->query($sql);
+
+    $memberinfo = $result -> fetch_assoc();
+    $_SESSION['email'] = $memberinfo['email'];
+    $_SESSION['password'] = $memberinfo['password'];
+    $_SESSION['num'] = $memberinfo['num'];
+    $_SESSION['name'] = $memberinfo['name'];
+    $num = $_SESSION['num'];
+    echo "<script>alert('$num 님 반갑습니다!')</script>";
+    echo "<script>location.href='main.php';</script>";
+}
 else {
-    //echo "회원등록 실패<br>";
     echo "<script>alert('회원가입 실패');</script>";
     echo "<script>location.href='login.html';</script>";
 }

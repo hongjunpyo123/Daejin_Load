@@ -1,10 +1,14 @@
+<?php
+        session_start();
+        $num = $_SESSION['num'];
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DAEJINLOAD</title>
 </head>
 <body>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +133,20 @@
             font-style: normal;
             font-size: 20px;
         }
+        #number{
+            transition: color 0.5s ease-in-out;
+            position: relative;
+            border-radius:  5px;
+            margin: 0;
+            padding: 5px;
+            color: gray;
+            left: 60%;
+        }
+        #number:hover{
+            transition: color 0.5s ease-in-out;
+            color: black;
+            cursor: default;
+        }
         hr{
             position: relative;
             width: 220px;
@@ -141,6 +159,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Daejin-Load</a>
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -162,10 +181,12 @@
                   <li><a class="dropdown-item" href="#">학교지도</a></li>
                   <li><a class="dropdown-item" href="building.html">학교건물</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="login.html">로그아웃</a></li>
+                  <li><a class="dropdown-item" href="logout.php">로그아웃</a></li>
                 </ul>
               </li>
-              
+              <li class="nav-item">
+                <p id="number"><?=$num?> 님 반가워요!</p>
+              </li>
             </ul>
             <form class="d-flex" role="search" method="get">
               <input class="form-control me-2" type="search" placeholder="검색하세요" aria-label="Search">
