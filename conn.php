@@ -6,5 +6,6 @@ $password = "";
 $dbname = "userdata";  
 
 $conn = new mysqli($server, $user, $password, $dbname);
+$conn->query("SET NAMES 'utf8'");
 
 ?>

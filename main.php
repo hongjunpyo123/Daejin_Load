@@ -1,10 +1,14 @@
 <?php
         session_start();
+        if(!$_SESSION['logged']){
+            echo "<script>alert('로그인 정보가 없습니다!')</script>";
+            echo "<script>location.href='login.html';</script>";
+        }
         $num = $_SESSION['num'];
 ?> 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +19,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--AOS라이브러리-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <style>
         html{
             height: 100vh;
         }
         .navbar-brand{
+            transition: background-color 0.3s ease-in-out;
             border: 3px solid gray;
             border-radius: 8px;
             font-size: 20px;
             font-family: fantasy;
             padding: 8px;
-            background-color:cornflowerblue
+            background-color: white;
+        }
+        .navbar-brand:hover{
+            transition: background-color 0.3s ease-in-out;
+            background-color: cornflowerblue;
         }
         #go{
             border: none;
         }
         #background{
             width: 100%;
-            height: 50vh;
+            height: 55vh;
             background-image: url("https://t1.daumcdn.net/brunch/service/user/3gu/image/1Xv8dChXdWI0zl9GXkyxwzLBXf0.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -140,7 +152,7 @@
             margin: 0;
             padding: 5px;
             color: gray;
-            left: 60%;
+            left: 100%;
         }
         #number:hover{
             transition: color 0.5s ease-in-out;
@@ -176,21 +188,22 @@
                   메뉴
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">강의실</a></li>
-                  <li><a class="dropdown-item" href="#">수강신청</a></li>
-                  <li><a class="dropdown-item" href="#">학교지도</a></li>
-                  <li><a class="dropdown-item" href="building.html">학교건물</a></li>
+                <li ><a class="dropdown-item" href="#">수강신청 TIP</a></li>
+                  <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
+                  <li><a class="dropdown-item" href="#">선배의 조언</a></li>
+                  <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="logout.php">로그아웃</a></li>
+                  <li><a class="dropdown-item" href="logdel.php" style="color:red;">회원탈퇴</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <p id="number"><?=$num?> 님 반가워요!</p>
+                <p id="number"><?=$_SESSION['name']?> 님 반가워요!</p>
               </li>
             </ul>
-            <form class="d-flex" role="search" method="get">
-              <input class="form-control me-2" type="search" placeholder="검색하세요" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" name="search" id="go">GO!</button>
+            <form class="d-flex" role="search" method="get" action="search.php">
+              <input class="form-control me-2" type="search" placeholder="검색하세요" aria-label="Search" name="search">
+              <button class="btn btn-outline-success" type="submit" id="go">GO!</button>
             </form>
           </div>
         </div>
@@ -203,7 +216,7 @@
                 <td>
                     <p style="margin: 0; padding: 0; margin-top: 20px;"><li id="first_tip"> 수강신청 Tip</li></p>
                     <hr>
-                    <div class="first_card"></div>
+                    <a href=""><div class="first_card"></div></a>
                 </td>
             </tr>
         </div>
@@ -212,7 +225,7 @@
                 <td>
                     <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> 학교생활 Tip</li></p>
                     <hr>
-                    <div class="second_card"></div>
+                    <a href=""><div class="second_card"></div></a>
                 </td>
             </tr>
         </div>
@@ -221,7 +234,7 @@
                 <td>
                     <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="third_tip"> 선배의 조언</li></p>
                     <hr>
-                    <div class="third_card"></div>
+                    <a href=""><div class="third_card"></div></a>
                 </td>
             </tr>
         </div>
@@ -229,10 +242,9 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         const images = [
-            'https://t1.daumcdn.net/brunch/service/user/3gu/image/1Xv8dChXdWI0zl9GXkyxwzLBXf0.png',
-            'https://t1.daumcdn.net/brunch/service/user/3gu/image/jlwLbQzTKiaAlyK0LwNaeeL84xM.PNG',
-            'https://t1.daumcdn.net/brunch/service/user/3gu/image/jlwLbQzTKiaAlyK0LwNaeeL84xM.PNG',
-            'https://t1.daumcdn.net/brunch/service/user/3gu/image/4Z67Dnq99Uq295YlbGg8eilQ4us.PNG'
+            'img/학교사진1.png',
+            'img/학교사진2.png',
+            'img/학교사진3.png',
         ];
         let currentIndex = 0;
 
@@ -246,12 +258,18 @@
         setInterval(changeBackgroundImage, 2800);
     </script>
     <div id="card_container">
-        <a href=""><img src="img/학교카드.png" id="card"></a>
+        <a href="https://card.kbcard.com/CXPRICAC0076.cms?mainCC=a&cooperationcode=04148"><img src="img/학교카드.png" id="card"></a>
     </div>
     <div id="low_bar">
         <li id="low_bar_text">제작 : 0000</li>
         <li id="low_bar_text">전화번호 : 010-0000-0000</li>
         <li id="low_bar_text">제작일 : 2024-00-00</li>
     </div>
+<script> 
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 </body>
 </html>

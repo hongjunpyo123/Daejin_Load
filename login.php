@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'conn.php';
+$_SESSION["logged"] = false;
+include_once 'conn.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
     
@@ -23,8 +24,10 @@ include 'conn.php';
             $_SESSION['password'] = $memberinfo['password'];
             $_SESSION['num'] = $memberinfo['num'];
             $_SESSION['name'] = $memberinfo['name'];
+            $_SESSION["logged"] = true;
             $num = $_SESSION['num'];
-            echo "<script>alert('$num 님 반갑습니다!')</script>";
+            $name = $_SESSION['name'];
+            echo "<script>alert('$name 님 반갑습니다!')</script>";
             echo "<script>location.href='main.php'</script>";
         }
     }

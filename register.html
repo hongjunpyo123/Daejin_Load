@@ -99,8 +99,15 @@
     @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
         width: 100%;
-
     }
+    }
+    @keyframes fadein{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
     }
 
     form{
@@ -115,6 +122,7 @@
         padding: 20px;
         border-radius: 15px;
         margin-top: 15px;
+        animation: fadein 1s;
     }
 
     </style>

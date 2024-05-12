@@ -19,7 +19,8 @@ if($conn->query($sql)){
     $_SESSION['num'] = $memberinfo['num'];
     $_SESSION['name'] = $memberinfo['name'];
     $num = $_SESSION['num'];
-    echo "<script>alert('$num 님 반갑습니다!')</script>";
+    $_SESSION["logged"] = true;
+    echo "<script>alert('$name 님 반갑습니다!')</script>";
     echo "<script>location.href='main.php';</script>";
 }
 else {
