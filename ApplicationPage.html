@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>수강신청</title>
+        <meta charset="utf-8">
+        <!-- Favicons -->
+        <link href="img/symbol.png" rel="icon">
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                position: relative;
+                height: 100vh;
+                width: 100%;
+                background-image: url(img/배경.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            body{
+                height: 100vh;
+                width: 100%;
+            }
+            .top-bar{
+                position: relative;
+                background-color: rgba(0, 0, 0, 0);
+                height: 7.1vh;
+                width: 100%;
+            }
+            .first-container{
+                float: left;
+                position: relative;
+                background-color: rgb(238, 238, 238);
+                height: 70vh;
+                width: 11%;
+                border-radius: 1px;
+                border: 1px solid rgb(154, 154, 154);
+                margin-top: 5px;
+            }
+            .first2-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                background-color: rgb(224, 229, 246);
+                height: 21.3vh;
+                width: 99.9%;
+                border-radius: 1px;
+                border: 1px solid rgb(154, 154, 154);
+                top: 100%;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+            }
+            .second-container{
+                position: relative;
+                background-color: white;
+                border: 1px solid rgb(154, 154, 154);
+                height: 91.5vh;
+                width: 60%;
+                margin: 5px;
+            }
+            #input-text{
+                width: 43px;
+            }
+            #push{
+                background-color: black;
+                color: white;
+                border-radius: 2px;
+                height: 22px;
+                width: 40px;
+                margin: 4px;
+            }
+            td{
+                font-size: 14px;
+                padding: 4px;
+            }
+            #t-text{
+                margin: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-bar"></div>
+        <div class="container">
+            <div class="first-container">
+                <div class="first2-container">
+                    <form action="">
+                    <table>
+                        <tr>
+                            <td style="color: red; font-weight:900" id="t-text">수강신청빨리하기</td>
+                        </tr>
+                        <tr>
+                            <td>과목번호-분반</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="first-value" id="input-text">-<input type="text" name="second-value" id="input-text"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="신청" id="push"></td>
+                        </tr>
+                    </table>
+                </form>
+                </div>
+            </div>
+            <div class="second-container"></div>
+        </div>
+        </div>
+    </body>
+</html>

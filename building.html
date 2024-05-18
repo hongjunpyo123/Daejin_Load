@@ -6,6 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--AOS라이브러리-->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <!-- Favicons -->
+    <link href="img/symbol.png" rel="icon">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <style>
         body{
@@ -77,6 +79,13 @@
           transition: background-color ease 0.3s;
           background-color: rgba(211, 211, 211, 0.7);
         }
+        .btn-custom{
+          color: blue;
+          border: none;
+      }
+      .btn-custom:hover{
+          background-color:cornflowerblue;
+      }
         #card_button{
           font-size: 14px;
           border-radius: 100%;
@@ -96,7 +105,6 @@
           transition: opacity 0.3s ease-in-out;
           opacity: 1;
         }
-
 
         #circle1{
           position: relative;
@@ -147,10 +155,6 @@
           top: 50.31%;
           left: 55.07%;
         }
-        #circle12{
-          top: 47.78%;
-          left: 47.67%;
-        }
         #circle13{
           top: 42.11%;
           left: 48.32%;
@@ -171,10 +175,6 @@
           top: 19.00%;
           left: 36.74%;
         }
-        #circle18{
-          top: 12.91%;
-          left: 32.40%;
-        }
         #circle19{
           top: 18.16%;
           left: 51.85%;
@@ -186,10 +186,6 @@
         #circle21{
           top: 10.60%;
           left: 46.23%;
-        }
-        #circle22{
-          top: 8.92%;
-          left: 40.28%;
         }
         #circle23{
           top: 35.18%;
@@ -308,6 +304,7 @@
                   <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
                   <li><a class="dropdown-item" href="#">선배의 조언</a></li>
                   <li><a class="dropdown-item" href="#">학교지도</a></li>
+                  <li><a class="dropdown-item" href="noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="login.html">로그아웃</a></li>
                   <li><a class="dropdown-item" href="logdel.php" style="color:red;">회원탈퇴</a></li>
@@ -317,375 +314,347 @@
             </ul>
             <form class="d-flex" role="search" method="get">
               <input class="form-control me-2" type="search" placeholder="검색하세요" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" name="search" id="go">GO!</button>
+              <button class="btn btn-outline-success btn-custom" type="submit" name="search" id="go">GO!</button>
             </form>
           </div>
         </div>
       </nav>
       <div class="map_container">
       <div class="map">
-        <a href="building1.html1" class="circle_a"><button id="circle1" class="circle">1</a>
-        <a href="building1.html2" class="circle_a"><button id="circle2" class="circle">2</a>
-        <a href="building1.html3" class="circle_a"><button id="circle3" class="circle">3</a>
-        <a href="building1.html4" class="circle_a"><button id="circle4" class="circle">4</a>        
-        <a href="building1.html5" class="circle_a"><button id="circle5" class="circle">5</a>
-        <a href="building1.html6" class="circle_a"><button id="circle6" class="circle">6</a>
-        <a href="building1.html7" class="circle_a"><button id="circle7" class="circle">7</a>
-        <a href="building1.html8" class="circle_a"><button id="circle8" class="circle">8</a>
-        <a href="building1.html9" class="circle_a"><button id="circle9" class="circle">9</a>
-        <a href="building1.html10" class="circle_a"><button id="circle10" class="circle">10</a>        
-        <a href="building1.html11" class="circle_a"><button id="circle11" class="circle">11</a>
-        <a href="building1.html12" class="circle_a"><button id="circle12" class="circle">12</a>    
-        <a href="building1.html13" class="circle_a"><button id="circle13" class="circle">13</a>
-        <a href="building1.html14" class="circle_a"><button id="circle14" class="circle">14</a>
-        <a href="building1.html15" class="circle_a"><button id="circle15" class="circle">15</a>
-        <a href="building1.html16" class="circle_a"><button id="circle16" class="circle">16</a>        
-        <a href="building1.html17" class="circle_a"><button id="circle17" class="circle">17</a>
-        <a href="building1.html18" class="circle_a"><button id="circle18" class="circle">18</a>
-        <a href="building1.html19" class="circle_a"><button id="circle19" class="circle">19</a>
-        <a href="building1.html20" class="circle_a"><button id="circle20" class="circle">20</a>
-        <a href="building1.html21" class="circle_a"><button id="circle21" class="circle">21</a>
-        <a href="building1.html22" class="circle_a"><button id="circle22" class="circle">22</a>        
-        <a href="building1.html23" class="circle_a"><button id="circle23" class="circle">23</a>
-        <a href="building1.html24" class="circle_a"><button id="circle24" class="circle">24</a>
-        <a href="building1.html25" class="circle_a"><button id="circle25" class="circle">25</a>
-        <a href="building1.html26" class="circle_a"><button id="circle26" class="circle">26</a>
-        <a href="building1.html27" class="circle_a"><button id="circle27" class="circle">27</a>
-        <a href="building1.html28" class="circle_a"><button id="circle28" class="circle">28</a>        
-        <a href="building1.html29" class="circle_a"><button id="circle29" class="circle">29</a>
-        <a href="building1.html30" class="circle_a"><button id="circle30" class="circle">30</a>
-        <a href="building1.html31" class="circle_a"><button id="circle31" class="circle">31</a>
-        <a href="building1.html32" class="circle_a"><button id="circle32" class="circle">32</a>
-        <a href="building1.html33" class="circle_a"><button id="circle33" class="circle">33</a>
-        <a href="building1.html34" class="circle_a"><button id="circle34" class="circle">34</a>        
-        <a href="building1.html35" class="circle_a"><button id="circle35" class="circle">35</a>
-        <a href="building1.html36" class="circle_a"><button id="circle36" class="circle">36</a> 
+        <a href="학교시설/building1.html" class="circle_a"><button id="circle1" class="circle">1</a>
+        <a href="학교시설/building2.html" class="circle_a"><button id="circle2" class="circle">2</a>
+        <a href="학교시설/building3.html" class="circle_a"><button id="circle3" class="circle">3</a>
+        <a href="학교시설/building4.html" class="circle_a"><button id="circle4" class="circle">4</a>        
+        <a href="학교시설/building5.html" class="circle_a"><button id="circle5" class="circle">5</a>
+        <a href="학교시설/building6.html" class="circle_a"><button id="circle6" class="circle">6</a>
+        <a href="학교시설/building7.html" class="circle_a"><button id="circle7" class="circle">7</a>
+        <a href="학교시설/building8.html" class="circle_a"><button id="circle8" class="circle">8</a>
+        <a href="학교시설/building9.html" class="circle_a"><button id="circle9" class="circle">9</a>
+        <a href="학교시설/building10.html" class="circle_a"><button id="circle10" class="circle">10</a>        
+        <a href="학교시설/building11.html" class="circle_a"><button id="circle11" class="circle">11</a>    
+        <a href="학교시설/building13.html" class="circle_a"><button id="circle13" class="circle">13</a>
+        <a href="학교시설/building14.html" class="circle_a"><button id="circle14" class="circle">14</a>
+        <a href="학교시설/building15.html" class="circle_a"><button id="circle15" class="circle">15</a>
+        <a href="학교시설/building16.html" class="circle_a"><button id="circle16" class="circle">16</a>        
+        <a href="학교시설/building17.html" class="circle_a"><button id="circle17" class="circle">17</a>
+        <a href="학교시설/building18.html" class="circle_a"><button id="circle18" class="circle">18</a>
+        <a href="학교시설/building19.html" class="circle_a"><button id="circle19" class="circle">19</a>
+        <a href="학교시설/building20.html" class="circle_a"><button id="circle20" class="circle">20</a>
+        <a href="학교시설/building21.html" class="circle_a"><button id="circle21" class="circle">21</a>      
+        <a href="학교시설/building23.html" class="circle_a"><button id="circle23" class="circle">23</a>
+        <a href="학교시설/building24.html" class="circle_a"><button id="circle24" class="circle">24</a>
+        <a href="학교시설/building25.html" class="circle_a"><button id="circle25" class="circle">25</a>
+        <a href="학교시설/building26.html" class="circle_a"><button id="circle26" class="circle">26</a>
+        <a href="학교시설/building27.html" class="circle_a"><button id="circle27" class="circle">27</a>
+        <a href="학교시설/building28.html" class="circle_a"><button id="circle28" class="circle">28</a>        
+        <a href="학교시설/building29.html" class="circle_a"><button id="circle29" class="circle">29</a>
+        <a href="학교시설/building30.html" class="circle_a"><button id="circle30" class="circle">30</a>
+        <a href="학교시설/building31.html" class="circle_a"><button id="circle31" class="circle">31</a>
+        <a href="학교시설/building32.html" class="circle_a"><button id="circle32" class="circle">32</a>
+        <a href="학교시설/building33.html" class="circle_a"><button id="circle33" class="circle">33</a>
+        <a href="학교시설/building34.html" class="circle_a"><button id="circle34" class="circle">34</a>        
+        <a href="학교시설/building35.html" class="circle_a"><button id="circle35" class="circle">35</a>
+        <a href="학교시설/building36.html" class="circle_a"><button id="circle36" class="circle">36</a> 
         </div>
       </div>
 
 <div class="card_container">
 
   <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+    <img src="img/학교시설/체육관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">1.체육관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building1.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card2" class="card" style="width: 18rem;">
+    <img src="img/학교시설/여긱1/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">2.여기숙사 1</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building2.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card3" class="card" style="width: 18rem;">
+    <img src="img/학교시설/여긱2/2.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">3.여기숙사 2</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building3.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card4" class="card" style="width: 18rem;">
+    <img src="img/학교시설/여긱3/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">4.여기숙사 3</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building4.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card5" class="card" style="width: 18rem;">
+    <img src="img/학교시설/여긱4/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">5.여기숙사 4</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building5.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card6" class="card" style="width: 18rem;">
+    <img src="img/학교시설/본관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">6.본관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building6.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card7" class="card" style="width: 18rem;">
+    <img src="img/학교시설/교수회관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">7.교수회관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building7.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card8" class="card" style="width: 18rem;">
+    <img src="img/학교시설/대학원/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">8.대학원</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building8.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card9" class="card" style="width: 18rem;">
+    <img src="img/학교시설/국제학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">9.국제학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building9.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card10" class="card" style="width: 18rem;">
+    <img src="img/학교시설/학생회관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">10.학생회관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building10.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card11" class="card" style="width: 18rem;">
+    <img src="img/학교시설/대진교육관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">11.대진교육관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building11.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">12.파워플랜드</h5>
-        <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
-      </div>
-  </div>
-
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card13" class="card" style="width: 18rem;">
+    <img src="img/학교시설/상생관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">13.상생관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building13.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card14" class="card" style="width: 18rem;">
+    <img src="img/학교시설/사회과학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">14.사회과학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building14.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card15" class="card" style="width: 18rem;">
+    <img src="img/학교시설/인문학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">15.인문학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building15.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card16" class="card" style="width: 18rem;">
+    <img src="img/학교시설/정보전산원/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">16.정보전산원</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building16.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card17" class="card" style="width: 18rem;">
+    <img src="img/학교시설/중앙도서관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">17.도서관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building17.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">18.산학협동실습관</h5>
-        <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
-      </div>
-  </div>
-
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card19" class="card" style="width: 18rem;">
+    <img src="img/학교시설/이공대다동/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">19.이공대다동</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building19.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card20" class="card" style="width: 18rem;">
+    <img src="img/학교시설/이공대나동/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">20.이공대나동</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building20.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card21" class="card" style="width: 18rem;">
+    <img src="img/학교시설/이공대가동/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">21.이공대가동</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building21.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">22.OLED</h5>
-        <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
-      </div>
-  </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card23" class="card" style="width: 18rem;">
+    <img src="img/학교시설/박물관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">23.박물관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building23.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card24" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱7/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">24.남기숙사 7</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building24.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card25" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱6/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">25.남기숙사 6</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building25.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card26" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱5/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">26.남기숙사 5</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building26.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card27" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱4/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">27.남기숙사 4</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building27.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card28" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱3/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">28.남기숙사 3</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building28.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card29" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱2/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">29.남기숙사 2</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building29.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card30" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남긱1/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">30.남기숙사 1</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building30.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card31" class="card" style="width: 18rem;">
+    <img src="img/학교시설/남기숙사식당/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">31.남기숙사식당</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building31.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card32" class="card" style="width: 18rem;">
+    <img src="img/학교시설/예술관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">32.예술관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building32.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card33" class="card" style="width: 18rem;">
+    <img src="img/학교시설/학군단/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">33.학군단</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building33.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card34" class="card" style="width: 18rem;">
+    <img src="img/학교시설/생활과학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">34.생활과학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building34.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card35" class="card" style="width: 18rem;">
+    <img src="img/학교시설/음악학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">35.음악학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building35.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 
-  <div data-aos="fade-down" id="card1" class="card" style="width: 18rem;">
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MDJfMTkw%2FMDAxNzEyMDQwMDc5ODM0.EJvAbmuOnGWwEVViWzXYtfbJ9U1SQmHNvt70_anhF_Yg.dN6kqStzIc6M-569lpej2OnRjZbif_QUPguhKtbaJwUg.PNG%2F%25C4%25B8%25C3%25B31.PNG&type=sc960_832" class="card-img-top" alt="...">
+  <div data-aos="fade-down" id="card36" class="card" style="width: 18rem;">
+    <img src="img/학교시설/미술학관/1.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">36.미술학관</h5>
         <hr>
-        <a href="building_1.html" class="btn btn-primary" id="card_button">둘러보기</a>
+        <a href="학교시설/building36s.html" class="btn btn-primary" id="card_button">둘러보기</a>
       </div>
   </div>
 </div>
