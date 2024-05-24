@@ -216,7 +216,7 @@
                   메뉴
                 </a>
                 <ul class="dropdown-menu">
-                <li ><a class="dropdown-item" href="ApplicationloginPage.html">수강신청 TIP</a></li>
+                <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 TIP</a></li>
                   <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
                   <li><a class="dropdown-item" href="#">선배의 조언</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
@@ -245,7 +245,7 @@
                 <td>
                     <p style="margin: 0; padding: 0; margin-top: 20px;"><li id="first_tip"> 수강신청 Tip</li></p>
                     <hr>
-                    <a href="ApplicationloginPage.html?num=<?=$num?>"><div class="first_card"></div></a>
+                    <a href="수강신청페이지/ApplicationloginPage.html?num=<?=$num?>"><div class="first_card"></div></a>
                 </td>
             </tr>
         </div>
