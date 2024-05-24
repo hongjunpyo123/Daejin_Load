@@ -71,7 +71,6 @@
                 background-size: cover;
             }
 
-
             #slide1 {
                 background-image: url("../img/학교시설/이공대나동/1층/1.jpg");
                 background-size: cover;
@@ -103,7 +102,6 @@
                 padding: 6% 0 0;
             }
 
-
             #slide6 {
                 background-image: url("../img/학교시설/이공대나동/2층/3.jpg");
                 background-size: cover;
@@ -129,7 +127,6 @@
                 background-position: center;
                 padding: 6% 0 0;
             }
-
 
             #slide10 {
                 background-image: url("../img/학교시설/이공대나동/3층/2.jpg");
@@ -193,14 +190,12 @@
                 padding: 6% 0 0;
             }
 
-
             #slide20 {
                 background-image: url("../img/학교시설/이공대나동/5층/4.jpg");
                 background-size: cover;
                 background-position: center;
                 padding: 6% 0 0;
             }
-        
 
             h2 {
                 font-size: 5em;
@@ -271,7 +266,12 @@
                 //fullpage.js 사용하기 위한 코드 작성부
                 $('#fullpage').fullpage({
                     anchors: [
-                        'main', '1', '2', '3', '4', '5'
+                        'main',
+                        '1',
+                        '2',
+                        '3',
+                        '4',
+                        '5'
                     ],
                     verticalCentered: false,
                     scrollingSpeed: 800,
@@ -280,9 +280,7 @@
                     continuousVertical: false //마지막 페이지에서 내리면 위로 올라옴(true)
                 });
             });
-            const images = ['../img/학교시설/이공대나동/건물사진/1.jpg', '../img/학교시설/이공대나동/건물사진/2.jpg',
-             '../img/학교시설/이공대나동/건물사진/3.jpg', '../img/학교시설/이공대나동/건물사진/4.jpg',
-              '../img/학교시설/이공대나동/건물사진/5.jpg'];
+            const images = ['../img/학교시설/이공대나동/건물사진/1.jpg', '../img/학교시설/이공대나동/건물사진/2.jpg', '../img/학교시설/이공대나동/건물사진/3.jpg', '../img/학교시설/이공대나동/건물사진/4.jpg', '../img/학교시설/이공대나동/건물사진/5.jpg'];
             let currentIndex = 0;
 
             function changeBackgroundImage() {
@@ -332,7 +330,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li >
-                                    <a class="dropdown-item" href="../ApplicationloginPage.html">수강신청 TIP</a>
+                                    <a class="dropdown-item" href="../수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">학교생활 TIP</a>
@@ -346,13 +344,12 @@
                                 <li>
                                     <a class="dropdown-item" href="../noticeboard.php">채팅방</a>
                                 </li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li>
-                                    <hr class="dropdown-divider"></li>
-                                <li>
-                                    <a class="dropdown-item" href="../logout.php">로그아웃</a>
+                                    <a class="dropdown-item" href="../profile.php">회원정보</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../logdel.php" style="color:red;">회원탈퇴</a>
+                                    <a class="dropdown-item" href="../logout.php" style="color:red;">로그아웃</a>
                                 </li>
                             </ul>
                         </li>
@@ -379,8 +376,7 @@
     <div class="section" id="section2">
         <div
             class="slide d-flex flex-column justify-content-start align-items-center"
-            id="slide1">
-        </div>
+            id="slide1"></div>
         <div class="slide" id="slide2"></div>
         <div class="slide" id="slide3"></div>
     </div>
@@ -415,15 +411,15 @@
             <div class="slide" id="slide20"></div>
 
         </div>
-        </div>
     </div>
 </div>
+</div>
 <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
 <script>
-    AOS.init({duration: 2000, once: false});
+AOS.init({duration: 2000, once: false});
 </script>
 </body>
 </html>
