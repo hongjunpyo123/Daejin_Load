@@ -216,14 +216,14 @@
                   메뉴
                 </a>
                 <ul class="dropdown-menu">
-                <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 TIP</a></li>
+                <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a></li>
                   <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
                   <li><a class="dropdown-item" href="#">선배의 조언</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><a class="dropdown-item" href="noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="logout.php">로그아웃</a></li>
-                  <li><a class="dropdown-item" href="logdel.php" style="color:red;">회원탈퇴</a></li>
+                  <li><a class="dropdown-item" href="profile.php">회원정보</a></li>
+                  <li><a class="dropdown-item" href="logout.php" style="color:red;">로그아웃</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -243,7 +243,7 @@
         <div class="first_card_base">
             <tr>
                 <td>
-                    <p style="margin: 0; padding: 0; margin-top: 20px;"><li id="first_tip"> 수강신청 Tip</li></p>
+                    <p style="margin: 0; padding: 0; margin-top: 20px;"><li id="first_tip"> 수강신청 테스트</li></p>
                     <hr>
                     <a href="수강신청페이지/ApplicationloginPage.html?num=<?=$num?>"><div class="first_card"></div></a>
                 </td>
