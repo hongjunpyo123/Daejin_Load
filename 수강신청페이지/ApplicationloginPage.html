@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>대진대학교</title>
+<!-- Favicons -->
+<link href="../img/symbol.png" rel="icon">
+<style>
+	*, html, body {
+		padding:0;
+		margin:0;
+		font-size:12px;
+		font-family: "돋움,dotum,san-serif"; 
+		color:#646464;
+		animation: fadein 0.5s;
+	}
+	html, body {height:100%;}
+	
+	body.content { width:1047px }
+	
+	ul, ol, li {list-style:none;}
+	
+	a:link { text-decoration:none; }
+	a:hover { text-decoration:none; }
+	a:active { text-decoration:none; }
+	a:visited { text-decoration:none; }
+	
+	img { border:none; vertical-align:top; }
+	input { border:1px solid #cecdcd; margin:0; padding:0 0 0 5px; height:18px; line-height:18px; vertical-align:middle;}
+	textarea { background:#ededed; border:1px solid #dadada; width:93%; height:200px; margin:2px 0 2px 0; padding:5px;}
+	select { height:20px; line-height:20px; padding:0 0 0 5px; border:1px solid #cecdcd; }
+	table { border-collapse:collapse; table-layout:fixed;}
+	
+	/* 로그인 부분 */
+	div.login {width:1067px; margin:0 auto; }
+	p.copyright {text-align:right; padding:15px 20px 30px 0;}
+	p.txt_login {margin:59px 0 0 100px; width:315px; height:40px; border-bottom:1px solid #c3c7c9; padding:0 0 0 5px;}
+	
+	div.box {border-left:1px solid #c3c7c9; border-right:1px solid #c3c7c9; border-bottom:1px solid #c3c7c9; clear:both; display:table; width:1065px; padding-bottom:30px;}
+	div.box ul {clear:both;}
+	div.box ul.notice {padding:50px 0 0 0;}
+	div.box ul li {float:left; width:49%;}
+	div.box ul li.txt {line-height:22px; padding:40px 0 0 0;}
+	
+	table.login {margin:20px 0 0 100px; width:315px;}
+	table.login td {height:27px; padding-right:10px;}
+	table.login td.btn {text-align:right;}
+	table.login td.tit {padding-left:20px;}
+	table.login td select,input {width:100%;}
+	
+	table.notice {margin:0 0 0 100px; width:365px;}
+	table.notice th {text-align:left; height:32px; vertical-align:top;}
+	table.notice td {height:25px;}
+	table.notice td.tit {background:url("../img/icon_notice.gif") 3px 9px no-repeat; padding-left:13px;}
+	table.notice2 {margin:0 0 0 0; width:365px;}
+	
+	
+	
+	/* 메인 부분 */
+	table.main {width:1047px; height:100%;}
+	table.main td { vertical-align:top; height:100%;}
+	table.main_sub {height:100%; width:100%;}
+	table.main_sub td { vertical-align:top; border-left:1px solid #c3c7c9; border-right:1px solid #c3c7c9;}
+	table.menu { width:193px; border-top:1px solid #c3c7c9; margin-top:1px;}
+	table.menu td {width:193px; background:#f6f7fa; padding-top:15px;}
+	
+	table.main_left {width:203px; height:100%;}
+	
+	table.main_top { margin:0 auto ;  min-width:1047px; min-height:240px; }
+	table.main_top td { vertical-align:top; height:100% }
+	
+	table.main_sub_content { min-width:1047px; height:100%;}
+	table.main_sub_content td {  vertical-align:top; border-left:1px solid #c3c7c9; border-right:1px solid #c3c7c9;}
+	
+	
+	table.depth {margin:0 0 0 15px;}
+	table.depth tr {background:url('../image/icon_bg.gif') 0px 20px repeat-y;}
+	table.depth td {padding:7px 0 0 20px; background:url('../image/icon_minus.gif') 0px 7px no-repeat; border:none;}
+	table.depth td.plus {background:url('../img/icon_plus.gif') 0px 7px no-repeat; }
+	table.depth td.end {background:url('../img/icon_end.gif') 0px -3px no-repeat; }
+	table.depth td.no {background:none; }
+	table.depth tr.no {background:none;}
+	table.depth tr.fir {background:url('../image/icon_bg.gif') 0px 17px no-repeat;}
+	table.depth td a { color:#00327a;}
+	table.depth td a.on { font-weight:bold;}
+	table.depth td a.logout { font-weight:bold; color:red;}
+	
+	.bot {width:194px; border:1px solid #c3c7c9; background:#eef4fa;  bottom:0px; margin-left:-1px; position:absolute; text-align:center; line-height:25px; padding:20px 0 50px 0;}
+	.bot input{width:40px;}
+	.bot a img {margin-top:5px;}
+	.bot span {font-weight:bold; color:red;}
+	
+	div.content { text-align:left; padding-left:10px;  width:840px; margin:0 ; }
+	table.tbl {width:100%; border-top:1px solid #e5e5e5; margin:10px 0 30px 0;}
+	table.tbl th {background:#eef4fa; border-right:1px solid #b7cee0; border-bottom:1px solid #e5e5e5; color:#00327a;}
+	table.tbl td {border:none; border-bottom:1px solid #e5e5e5; height:30px; line-height:30px; text-align:center;}
+	table.tbl td.txt {text-align:left;}
+	table.tbl td.txt span {font-weight:bold; color:red;}
+	table.tbl td.left {text-align:left; padding-left:5px; }
+	table.tbl th.left {text-align:left; padding-left:5px; }
+	
+	p.title {font-weight:bold; line-height:20px; font-size:16px; padding-left:20px; color:#00327a; background:url('../image/icon_tit.gif') left 1px no-repeat;}
+	p.select {font-weight:bold; color:#666666;  line-height:40px;}
+	p.select select {margin-right:20px;}
+	p.txt {line-height:22px; padding:10px 0 0 0;}
+	p.print {text-align:right;}
+	
+	table.kamok {border-top:2px solid #00327a; border-bottom:2px solid #00327a;}
+	table.kamok th {padding:9px 0 7px 0; }
+	table.kamok td {border-right:1px solid #b7cee0; }
+	table.kamok th.none {border-right:none; }
+	table.kamok td.none {border-right:none;word-break:break-all; }
+	table.kamok td.left {text-align:left; padding-left:5px; word-break:break-all; }
+	table.kamok td img {vertical-align:middle; }
+	
+	
+	table.kamok2 {border-top:2px solid #00327a; border-bottom:2px solid #00327a;}
+	table.kamok2 th {height:30px; }
+	table.kamok2 td {border-right:1px solid #b7cee0; }
+	table.kamok2 th.none {border-right:none; }
+	table.kamok2 td.none {border-right:none; }
+	table.kamok2 td.left {text-align:left; padding-left:5px; }
+	table.kamok2 td img {vertical-align:middle; }
+	@keyframes fadein{
+		from{
+			opacity: 0;
+		}
+		to{
+			opacity: 1;
+		}
+	}
+</style>
+
+</head>
+<body>
+
+<div class="login">
+	<p><img src="../img/bg_login.jpg" usemap="#LOG_MAP" style="border: 0;"></p>
+		<map name="LOG_MAP">
+    	<area shape="rect" coords="0,135,117,207" href="../main.php" target="_blank" alt="대진대학교 홈페이지">
+		</map>
+	<div class="box">
+		<ul>
+			<li>
+				<p class="txt_login"><img src="../img/txt_login.gif"></p>
+				<form name="myform" method="post" action="/sugang/LoginB">
+				<table class="login">
+				<colgroup>
+					<col style="width:80px;">
+					<col>
+					<col style="width:70px;">
+				</colgroup>
+				<tr>
+					<td class="tit"><img src="../img/txt_gubun.gif"></td>
+					<td colspan="2">
+						<select name="user_flag" id="user_flag">
+            	<option value="1">학부생 / 휴학생 / 복학생</option>
+            	<option value="2">대학원생</option>
+            	<option value="10">Admin Tool</option>
+            </select>
+					</td>
+				</tr>
+				<tr>
+					<td class="tit"><img src="../img/txt_num.gif"></td>
+					<td><input type="text" name="stdNo" maxlength="8" onkeyup="javascript:js_go_next(this.value,'1')" title="학번입력" value="20230101"></td>
+					<td rowspan="2" class="btn"><a style="cursor:pointer" href="ApplicationPage.html"><img src="../img/btn_login.gif"></a></td>
+				</tr>
+				<tr>
+					<td class="tit"><img src="../img/txt_passwd.gif"></td>
+					<td>
+						<input type="password" name="passwd" onkeydown="javascript:enter()" title="패스워드입력" value="040909">
+					</td>
+				</tr>
+				</table>
+				</form>
+				<p>
+					<br>
+					<strong style="color:slategray;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>사용자 ID</strong> : 학번 (예:20001234) <a href="#" onclick="window.open('https://www.daejin.ac.kr/daejin/6341/subview.do', 'pwdno','left=300, top=200, width=750, height=600, scrollbars=no');return false">[학번검색]</a> <br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>학교에서 서비스 되는 모든 사이트의 로그인 정보(학번/비밀번호)<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;는 동일. 홈페이지 로그인을 통해 아이디/패스워드 접속여부 확인<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;초기 패스워드는 주민등록번호 앞자리 6자리(생년월일)
+				</strong></strong></p>
+			</li>
+			<li class="txt">
+				<strong style="color:red;">* DAEJIN-LOAD 테스트페이지<br>(아래 내용은 참고용으로 작성되었습니다)<br><br>
+                &nbsp;&nbsp;&nbsp;- 본 페이지는 테스트 페이지로 실제 수강신청이 진행되지 않습니다<br>
+                &nbsp;&nbsp;&nbsp;- 실제 수강신청 페이지는 <a href="https://dreams2.daejin.ac.kr/index.html" style="text-decoration-line: underline;">(여기)</a>를 참고해주세요<br>
+                &nbsp;&nbsp;&nbsp;※ 학번, 비밀번호와 무관하게  <a href="ApplicationPage.html" style="text-decoration-line: underline;">(확인)</a> 버튼 클릭 시 테스트용 수강신청 페이지로 이동합니다</strong><br>     	
+                &nbsp;&nbsp;&nbsp;※ 실제 수강신청 페이지에서는 학번, 비밀번호를 정확히 입력하셔야합니다<br>
+				&nbsp;&nbsp;&nbsp;※ 현재 [학번검색] 기능은 보안상의 이유로 제공되지 않고 있습니다<br>
+				&nbsp;&nbsp;&nbsp;※ 원래 페이지로 돌아가시려면 <a href="../main.php" style="text-decoration-line: underline;">(클릭)</a> 하십시오<br>
+				&nbsp;&nbsp;&nbsp;※ (ex) 학번 : 20230101 / 비밀번호 : 040101<br>
+			</li>
+		</ul>
+
+		<ul class="notice">
+			<li id="BRD_2"></li>
+			<li id="BRD_3"></li>
+		</ul>
+	</div>
+
+	<p class="copyright"><img src="../img/txt_copyright.gif"></p>
+
+</div>
+
+</body>
+</html>
+
