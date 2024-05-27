@@ -217,7 +217,7 @@
                 </a>
                 <ul class="dropdown-menu">
                 <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a></li>
-                  <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
+                  <li><a class="dropdown-item" href="bulletinboard.php">학교생활 TIP</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><a class="dropdown-item" href="noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -253,7 +253,7 @@
                 <td>
                     <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> 학교생활 Tip(게시판)</li></p>
                     <hr>
-                    <a href=""><div class="second_card"></div></a>
+                    <a href="bulletinboard.php"><div class="second_card"></div></a>
                 </td>
             </tr>
         </div>
