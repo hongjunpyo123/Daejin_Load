@@ -218,7 +218,6 @@
                 <ul class="dropdown-menu">
                 <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a></li>
                   <li><a class="dropdown-item" href="#">학교생활 TIP</a></li>
-                  <li><a class="dropdown-item" href="#">선배의 조언</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><a class="dropdown-item" href="noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -252,18 +251,9 @@
         <div class="second_card_base">
             <tr>
                 <td>
-                    <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> 학교생활 Tip</li></p>
+                    <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> 학교생활 Tip(게시판)</li></p>
                     <hr>
                     <a href=""><div class="second_card"></div></a>
-                </td>
-            </tr>
-        </div>
-        <div class="third_card_base">
-            <tr>
-                <td>
-                    <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="third_tip"> 선배의 조언</li></p>
-                    <hr>
-                    <a href=""><div class="third_card"></div></a>
                 </td>
             </tr>
         </div>
