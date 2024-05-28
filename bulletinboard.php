@@ -7,12 +7,20 @@
         }
         $num = $_SESSION['num'];
         $name = $_SESSION['name'];
+        $today = date("Y/m/d");
+
+        $sql = "SELECT * FROM bulletinboard";
+        $result = $conn->query($sql);
 ?>
 
 <html>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
     <head>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
         <!-- Favicons -->
         <link href="img/symbol.png" rel="icon">
 
@@ -53,17 +61,20 @@
             * {
                 margin: 0;
                 padding: 0;
+                box-sizing: content-box;
             }
 
             body {
                 height: 100vh;
             }
             .background {
-                height: 100%;
+                height: 1100%;
+                width: 100%;
                 background-image: url("img/산.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-position: bottom left;
+                background-position: fixed;
+                background-attachment: fixed;
                 animation: fadein 1s;
             }
             .navbar-brand {
@@ -88,6 +99,98 @@
                 transition: background-color 0.3s ease-in-out;
                 background-color: cornflowerblue;
             }
+
+            .card_container{
+                position: relative;
+                width: 100%;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            
+            .card{
+                transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                margin-top: 10px;
+                width: 200px;
+            }
+
+            .card:hover{
+                transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                cursor: pointer;
+                background-color: antiquewhite;
+                box-shadow: 2px 2px 2px gray;
+            }
+
+            .write{
+                display: flex;
+                position: fixed;
+                width: 100%;
+                top: 93%;
+                justify-content: end;
+            }
+            .write button{
+                font-family: fantasy;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+                left: 100%;
+                border-radius: 10px;
+                font-size: 15px;
+                padding: 5px;
+                background-color: rgba(75, 137, 0, 0.5);
+                color: black;
+                border: none;
+            }
+
+            .write button:hover{
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+                background-color: rgba(75, 137, 220, 1);
+                color: white;
+                border: 1px solid black;
+            }
+
+            .page_number a{
+                text-decoration: none;
+                display: none;
+            }
+
+            .card-title{
+                text-align: center;
+            }
+
+            #delete{
+                transition: text-shadow 0.2s ease-in-out;
+                float: right;
+                text-decoration: none;
+                color: red;
+            }
+            #delete:hover{
+                transition: text-shadow 0.2s ease-in-out;
+                text-shadow: 2px 2px 4px #000000;
+            }
+
+            @media (max-width: 875px) {
+            .card {
+                width: 100px;
+                font-size: 12px;
+            }
+            .card-title{
+                font-size: 16px;
+            }
+
+            .write{
+                width: 99%;
+                justify-content: center;
+
+            }
+
+            }
+
+            @media (max-height:723px) {
+
+            }
+
+
 
             @keyframes fadein {
                 from {
@@ -175,10 +278,56 @@
                 </div>
             </div>
         </nav>
-        <div class="background"></div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+        <div class="background">
+
+            <div class="card_container" onclick="">
+
+                <?php
+                    while($row = $result->fetch_row()){
+                        ?>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?=$row[5]?></h5>
+                                <p class="card-text"><?=$row[4]?></p>
+                            </div>
+                            <hr>
+                            <div class="info d-flex flex-column justify-content-center align-items-center">
+                                <p style="margin: 0;"><?=substr($row[2],2,2)?> 학번</p>
+                                <p style="margin: 0;">등록일 : <?=$row[3]?></p>
+                            </div>
+                            <div class="delete_btn">
+                            <?php
+                                if(strcmp($name,"관리자") == 0)
+                                {
+                                    ?>
+                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">삭제</a>
+                                    <?php
+                                }
+                                elseif(strcmp($name,$row[1]) == 0){
+                                    ?>
+                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">삭제</a>
+                                    <?php
+                                }
+                ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                ?>
+
+            </div>
+
+            <div class="write">
+                <a href="bulletinboardwrite.html"><button>TIP작성하기</button></a>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script> 
+        AOS.init({
+            duration: 500,
+            once: false
+        });
+        </script>         
     </body>
 </html>
