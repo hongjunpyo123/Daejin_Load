@@ -13,7 +13,7 @@
         if(empty($search)){
             $sql = "SELECT * FROM bulletinboard order by id desc";
         }else{
-            $sql = "select * from bulletinboard where title LIKE '%$search%' order by id desc";
+            $sql = "SELECT * FROM bulletinboard WHERE title LIKE '%$search%' OR content LIKE '%$search%' ORDER BY id DESC;";
         }
         $result = $conn->query($sql);
 ?>
@@ -70,7 +70,7 @@
             }
 
             body {
-                background-color: antiquewhite;
+                background-color: rgba(107, 208, 255, 0.6);;
                 height: 100vh;
             }
             .navbar-brand {
@@ -111,6 +111,9 @@
                 background-size: cover;
                 background-position: bottom center;
                 background-attachment: fixed;
+
+                border: 2px solid black;
+                border-radius: 5px;
                 
             }
             
@@ -122,7 +125,6 @@
 
             .card:hover{
                 transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-                cursor: pointer;
                 background-color: antiquewhite;
                 box-shadow: 2px 2px 2px gray;
             }
@@ -293,6 +295,11 @@
             <div class="card_container" onclick="">
 
                 <?php
+                    if($result->num_rows <= 0){
+                        $search = '';
+                        echo "<script>alert('검색 결과가 없습니다!');</script>";
+                        echo "<script>location.href='bulletinboard.php'</script>";
+                    }
                     while($row = $result->fetch_row()){
                         ?>
                         <div class="card" style="width: 18rem;">
