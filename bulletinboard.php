@@ -126,7 +126,6 @@
 
             .card:hover{
                 transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-                background-color: antiquewhite;
                 box-shadow: 2px 2px 2px gray;
             }
 
@@ -266,7 +265,7 @@
                                     <a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="bulletinboard.php">학교생활 TIP</a>
+                                    <a class="dropdown-item" href="bulletinboard.php">TIP 게시판</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="building.html">학교지도</a>
@@ -314,9 +313,25 @@
                         echo "<script>location.href='bulletinboard.php'</script>";
                     }
                     while($row = $result->fetch_row()){
+                        
                         ?>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
+                            <div class="delete_btn">
+                            <?php
+                                if(strcmp($name,"관리자") == 0)
+                                {
+                                    ?>
+                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">❌</a>
+                                    <?php
+                                }
+                                elseif(strcmp($name,$row[1]) == 0){
+                                    ?>
+                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">❌</a>
+                                    <?php
+                                }
+                            ?>
+                            </div>
                                 <?php if(empty($row[5])){
                                     $row[5] = '제목없음';
                                 } ?>
@@ -328,21 +343,6 @@
                             <div class="info d-flex flex-column justify-content-center align-items-center">
                                 <p style="margin: 0;"><?=substr($row[2],2,2)?> 학번</p>
                                 <p style="margin: 0;">등록일 : <?=$row[3]?></p>
-                            </div>
-                            <div class="delete_btn">
-                            <?php
-                                if(strcmp($name,"관리자") == 0)
-                                {
-                                    ?>
-                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">삭제</a>
-                                    <?php
-                                }
-                                elseif(strcmp($name,$row[1]) == 0){
-                                    ?>
-                                    <a href="bulletinboard_delete.php?id=<?=$row[0]?>" id="delete">삭제</a>
-                                    <?php
-                                }
-                ?>
                             </div>
                         </div>
                         <?php

@@ -156,7 +156,7 @@
             background-size: 100%;
         }
         .five_card{
-            background-image: url("img/채팅방.png");
+            background-image: url("img/카톡.jpg");
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: center;
@@ -217,7 +217,7 @@
                 </a>
                 <ul class="dropdown-menu">
                 <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a></li>
-                  <li><a class="dropdown-item" href="bulletinboard.php">학교생활 TIP</a></li>
+                  <li><a class="dropdown-item" href="bulletinboard.php">TIP 게시판</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><a class="dropdown-item" href="noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -251,7 +251,7 @@
         <div class="second_card_base">
             <tr>
                 <td>
-                    <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> 학교생활 Tip(게시판)</li></p>
+                    <p style="margin: 0; padding: 0;margin-top: 20px;"><li id="second_tip"> Tip 게시판</li></p>
                     <hr>
                     <a href="bulletinboard.php"><div class="second_card"></div></a>
                 </td>
