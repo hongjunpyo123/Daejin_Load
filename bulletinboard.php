@@ -175,6 +175,11 @@
                 text-shadow: 2px 2px 4px #000000;
             }
 
+            .tip{
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+            }
+
             @media (max-width: 875px) {
             .card {
                 width: 100px;
@@ -301,7 +306,7 @@
         <div class="background">
 
             <div class="card_container" onclick="">
-
+                <h1 style="width: 100%; text-align: center;" class="tip">TIP게시판!</h1>
                 <?php
                     if($result->num_rows <= 0){
                         $search = '';
