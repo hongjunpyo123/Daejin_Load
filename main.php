@@ -115,6 +115,8 @@
             }
             #low_bar{
                 opacity: 0;
+                display: none;
+                
             }
             #number{
             display: none;
