@@ -106,6 +106,7 @@
                 justify-content: space-evenly;
                 animation: fadein 1s;
                 margin-top: 2px;
+                padding-bottom: 15px;
 
                 background-image: url("img/산.jpg");
                 background-repeat: repeat;
