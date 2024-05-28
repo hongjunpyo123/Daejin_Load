@@ -98,13 +98,14 @@
 
             .card_container{
                 position: relative;
-                width: 100%;
+                width: 70%;
                 left: 50%;
                 transform: translate(-50%);
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 animation: fadein 1s;
+                margin-top: 2px;
 
                 background-image: url("img/산.jpg");
                 background-repeat: repeat;
@@ -112,8 +113,8 @@
                 background-position: bottom center;
                 background-attachment: fixed;
 
-                border: 2px solid black;
-                border-radius: 5px;
+                border: 3px solid black;
+                border-radius: 8px;
                 
             }
             
@@ -187,6 +188,13 @@
                 width: 99%;
                 justify-content: center;
 
+            }
+
+            .card_container{
+                width: 100%;
+                border: none;
+                margin: 0;
+                border-radius: 0px;
             }
 
             }
