@@ -11,9 +11,10 @@
     $content = $_POST['content'];
     $title = $_POST['title'];
 
-    if(mb_strlen($content) > 100 || mb_strlen($title) > 10){
+    if(mb_strlen($content) > 100 || mb_strlen($title) > 20){
         echo "<script>alert('글자수가 초과되었습니다');</script>";
         echo "<script>location.href='bulletinboardwrite.html';</script>";
+        exit;
     }
 
     $sql = "INSERT INTO bulletinboard (name, num, today, content, title) VALUES ('$name', $num, '$today', '$content', '$title')";

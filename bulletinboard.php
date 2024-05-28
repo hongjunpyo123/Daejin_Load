@@ -8,8 +8,13 @@
         $num = $_SESSION['num'];
         $name = $_SESSION['name'];
         $today = date("Y/m/d");
+        $search = $_POST['search'] ?? '';
 
-        $sql = "SELECT * FROM bulletinboard";
+        if(empty($search)){
+            $sql = "SELECT * FROM bulletinboard order by id desc";
+        }else{
+            $sql = "select * from bulletinboard where title LIKE '%$search%' order by id desc";
+        }
         $result = $conn->query($sql);
 ?>
 
@@ -65,17 +70,8 @@
             }
 
             body {
+                background-color: antiquewhite;
                 height: 100vh;
-            }
-            .background {
-                height: 1100%;
-                width: 100%;
-                background-image: url("img/산.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: fixed;
-                background-attachment: fixed;
-                animation: fadein 1s;
             }
             .navbar-brand {
                 transition: background-color 0.3s ease-in-out;
@@ -108,6 +104,14 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
+                animation: fadein 1s;
+
+                background-image: url("img/산.jpg");
+                background-repeat: repeat;
+                background-size: cover;
+                background-position: bottom center;
+                background-attachment: fixed;
+                
             }
             
             .card{
@@ -146,7 +150,6 @@
                 transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
                 background-color: rgba(75, 137, 220, 1);
                 color: white;
-                border: 1px solid black;
             }
 
             .page_number a{
@@ -266,11 +269,18 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search" method="get" action="search.php">
+                    <form class="d-flex" role="search" method="post" action="bulletinboard.php">
                         <input
                             class="form-control me-2"
                             type="search"
                             placeholder="검색하세요"
+                            <?php
+                                if(!empty($search)){
+                                    ?>
+                                    value="<?=$search?>";
+                                    <?php
+                                }
+                            ?>
                             aria-label="Search"
                             name="search">
                         <button class="btn btn-outline-success btn-custom" type="submit" id="go">GO!</button>
@@ -287,7 +297,11 @@
                         ?>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
+                                <?php if(empty($row[5])){
+                                    $row[5] = '제목없음';
+                                } ?>
                                 <h5 class="card-title"><?=$row[5]?></h5>
+                                <hr>
                                 <p class="card-text"><?=$row[4]?></p>
                             </div>
                             <hr>
