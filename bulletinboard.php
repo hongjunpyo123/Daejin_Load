@@ -95,7 +95,6 @@
                 transition: background-color 0.3s ease-in-out;
                 background-color: cornflowerblue;
             }
-
             .card_container{
                 position: relative;
                 width: 70%;
@@ -103,7 +102,7 @@
                 transform: translate(-50%);
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: space-around;
                 animation: fadein 1s;
                 margin-top: 2px;
                 padding-bottom: 15px;
@@ -342,7 +341,7 @@
                             </div>
                             <hr>
                             <div class="info d-flex flex-column justify-content-center align-items-center">
-                                <p style="margin: 0;"><?=substr($row[2],2,2)?> 학번</p>
+                                <p style="margin: 0;"><?=$name." ".substr($row[2],0,4)?>****</p>
                                 <p style="margin: 0;">등록일 : <?=$row[3]?></p>
                             </div>
                         </div>
