@@ -341,7 +341,7 @@
                             </div>
                             <hr>
                             <div class="info d-flex flex-column justify-content-center align-items-center">
-                                <p style="margin: 0;"><?=$name." ".substr($row[2],0,4)?>****</p>
+                                <p style="margin: 0;"><?=$row[1]." ".substr($row[2],0,4)?>****</p>
                                 <p style="margin: 0;">등록일 : <?=$row[3]?></p>
                             </div>
                         </div>
