@@ -69,6 +69,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             animation: fadein 1s;
+            max-height: 650px;
         }
         #card{
             transition: left 0.3s ease-in-out;
@@ -93,7 +94,7 @@
             flex-direction: column;
             text-align: center;
             background-color: gray;
-            height: 160px;
+            height: 130px;
         }
         #low_bar_text{
             position: relative;
@@ -120,7 +121,27 @@
             }
             #number{
             display: none;
+            }
+            #number{
+                display: none;
+            }
         }
+
+        @media (max-width: 991px){
+            #number{
+                display: none;
+            }
+        }
+
+        @media (max-height: 615px){
+            #low_bar{
+                opacity: 0;
+                display: none;
+                
+            }
+            #number{
+                display: none;
+            }
         }
         .first_card,.second_card,.third_card,.four_card,.five_card{
             text-align: center;
@@ -136,6 +157,9 @@
             transition: box-shadow 0.3s ease-in-out;
             cursor: pointer;
             box-shadow: 4px 4px 4px gray;
+        }
+        .first_card_base,.second_card_base,.four_card_base,.five_card_base{
+            max-height: 500px;
         }
         .first_card{
             background-image: url("img/수강신청.png");

@@ -117,7 +117,7 @@
                 background-color: white;
                 border: solid 2px black;
                 border-radius: 5px;
-                margin: 1px;
+                margin: 8px;
             }
 
             h1{
