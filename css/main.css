@@ -1,0 +1,192 @@
+
+html{
+    height: 100vh;
+}
+body{
+    height: 100vh;
+}
+.navbar-brand{
+    transition: background-color 0.3s ease-in-out;
+    border: 3px solid gray;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: fantasy;
+    padding: 8px;
+    background-color: white;
+}
+.navbar-brand:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: cornflowerblue;
+}
+#go{
+    border: none;
+}
+#background{
+    width: 100%;
+    height: 55vh;
+    background-image: url("https://t1.daumcdn.net/brunch/service/user/3gu/image/1Xv8dChXdWI0zl9GXkyxwzLBXf0.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+    animation: fadein 1s;
+}
+#sc{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-evenly;
+    background-image: url("../img/하늘.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadein 1s;
+    max-height: 650px;
+}
+#card{
+    transition: left 0.3s ease-in-out;
+    position: fixed;
+    opacity: 1;
+    width: 270px;
+    height: 180px;
+    left: -240px;
+    bottom: 30%;
+    float: left;
+}
+#card:hover{
+    transition: left 0.5s ease-in-out;
+    cursor: pointer;
+    left: 0px;
+}
+#low_bar{
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: gray;
+    height: 130px;
+}
+#low_bar_text{
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media (max-width: 471px){
+    #card{
+        opacity: 0;
+    }
+    #low_bar{
+        opacity: 0;
+        display: none;
+        
+    }
+    #number{
+    display: none;
+    }
+    #number{
+        display: none;
+    }
+}
+
+@media (max-width: 991px){
+    #number{
+        display: none;
+    }
+}
+
+@media (max-height: 615px){
+    #low_bar{
+        opacity: 0;
+        display: none;
+        
+    }
+    #number{
+        display: none;
+    }
+}
+.first_card,.second_card,.third_card,.four_card,.five_card{
+    text-align: center;
+    background-color: white;
+    border: 7px solid white;
+    border-radius: 5px;
+    height: 200px;
+    width: 220px;
+    min-width: 220px;
+    margin: 5px;
+}
+.first_card:hover,.second_card:hover,.third_card:hover,.four_card:hover,.five_card:hover{
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px gray;
+}
+.first_card_base,.second_card_base,.four_card_base,.five_card_base{
+    max-height: 500px;
+}
+.first_card{
+    background-image: url("../img/수강신청.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.second_card{
+    background-image: url("../img/학교생활.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.third_card{
+    background-image: url("../img/선배.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.four_card{
+    background-image: url("../img/학교지도.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.five_card{
+    background-image: url("../img/카톡.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.btn-custom{
+    color: blue;
+}
+.btn-custom:hover{
+    background-color:cornflowerblue;
+}
+#first_tip,#second_tip,#third_tip,#four_tip,#five_tip{
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 30px;
+}
+#number{
+    transition: color 0.5s ease-in-out;
+    position: relative;
+    border-radius:  5px;
+    margin: 0;
+    padding: 5px;
+    color: gray;
+    left: 100%;
+}
+#number:hover{
+    transition: color 0.5s ease-in-out;
+    color: black;
+    cursor: default;
+}
+hr{
+    position: relative;
+    width: 220px;
+    left: 5px;
+    border-top: 3px solid black;
+}
