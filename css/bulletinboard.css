@@ -4,6 +4,9 @@
                 padding: 0;
                 box-sizing: content-box;
             }
+            .dropdown-item{
+                width: 158px;
+            }
 
             body {
                 background-color: rgba(107, 208, 255, 0.6);;

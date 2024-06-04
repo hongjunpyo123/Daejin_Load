@@ -60,11 +60,6 @@
         
         <!--사진 조절 사이트 https://www.adobe.com/kr/express/feature/image/resize-->
 
-        <style>
-            .dropdown-item{
-                width: 158px;
-            }
-        </style>
     </head>
     <body>
         <?php

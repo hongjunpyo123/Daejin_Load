@@ -64,82 +64,11 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dokdo&family=East+Sea+Dokdo&family=Gasoek+One&family=Jua&display=swap"
             rel="stylesheet">
+
+        <!-- main.css -->
+        <link rel="stylesheet" href="css/search.css">
+            
         <!--사진 조절 사이트 https://www.adobe.com/kr/express/feature/image/resize-->
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: content-box;
-            }
-            body{
-                background-color: cadetblue;
-            }
-            .navbar-brand {
-                transition: background-color 0.3s ease-in-out;
-                border: 3px solid gray;
-                border-radius: 8px;
-                font-size: 20px;
-                font-family: fantasy;
-                padding: 8px;
-                background-color: white;
-            }
-
-            .navbar-brand:hover {
-                transition: background-color 0.3s ease-in-out;
-                background-color: cornflowerblue;
-            }
-
-            .btn-custom {
-                color: blue;
-                border: none;
-            }
-            .btn-custom:hover {
-                background-color: cornflowerblue;
-            }
-
-            .background {
-                animation: fadein 1s;
-            }
-            .card_container {
-                background-color: antiquewhite;
-                padding: 10px;
-                border-radius: 2px;
-            }
-            .noticeboard{
-                background-color: rgba(107, 208, 255, 0.6);
-                padding: 10px;
-                border-radius: 2px;
-            }
-            .card {
-                margin: 10px;
-            }
-            .card2{
-                background-color: white;
-                border: solid 2px black;
-                border-radius: 5px;
-                margin: 8px;
-            }
-
-            h1{
-                font-weight: 800;
-            }
-
-            @keyframes fadein {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
-            @keyframes fadeout {
-                from {
-                    opacity: 1;
-                }
-                to {
-                    opacity: 0;
-                }
-            }
         </style>
     </head>
     <body>
