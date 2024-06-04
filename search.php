@@ -5,7 +5,7 @@
         echo "<script>alert('로그인 정보가 없습니다!')</script>";
         echo "<script>location.href='login.html';</script>";
     }
-    $search =  $_GET['search'];
+    $search = $_GET['search'];
     $name = $_SESSION['name'];
     if(empty($search)){
         // $sql = "SELECT * FROM bulletinboard order by id desc";
@@ -93,7 +93,7 @@
                             <a class="nav-link active" aria-current="page" href="https://www.daejin.ac.kr">대진대학교</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.daejin.ac.kr">학교영상</a>
+                            <a class="nav-link" href="https://library.daejin.ac.kr/main_main.mir">중앙도서관</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a

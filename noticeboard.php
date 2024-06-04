@@ -111,7 +111,7 @@
                 <a class="nav-link active" aria-current="page" href="https://www.daejin.ac.kr">대진대학교</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://www.daejin.ac.kr">학교영상</a>
+                <a class="nav-link" href="https://library.daejin.ac.kr/main_main.mir">중앙도서관</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
