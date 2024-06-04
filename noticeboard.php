@@ -43,18 +43,18 @@
             background-color: rgba(0, 0, 0, 0);
         }
         .navbar-brand{
-          transition: background-color 0.3s ease-in-out;
-          border: 3px solid gray;
-          border-radius: 8px;
-          font-size: 20px;
-          font-family: fantasy;
-          padding: 8px;
-          background-color: white;
-      }
-      .navbar-brand:hover{
-          transition: background-color 0.3s ease-in-out;
-          background-color: cornflowerblue;
-      }
+    transition: background-color 0.3s ease-in-out;
+    border: 3px solid gray;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: fantasy;
+    padding: 8px;
+    background-color: white;
+}
+.navbar-brand:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: cornflowerblue;
+}
       .container{
         position: relative;
         background-color: rgba(255, 255, 255, 0.5);
@@ -120,7 +120,6 @@
                 <ul class="dropdown-menu">
                 <li ><a class="dropdown-item" href="수강신청페이지/ApplicationloginPage.html">수강신청 테스트</a></li>
                   <li><a class="dropdown-item" href="#">TIP 게시판</a></li>
-                  <li><a class="dropdown-item" href="#">선배의 조언</a></li>
                   <li><a class="dropdown-item" href="building.html">학교지도</a></li>
                   <li><a class="dropdown-item" href="../noticeboard.php">채팅방</a></li>
                   <li><hr class="dropdown-divider"></li>

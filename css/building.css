@@ -48,7 +48,7 @@ body{
     border: 8px solid rgb(63, 63, 63);
     width: 78vh;
     height: 60vh;
-    background-image: url("img/지도.jpg");
+    background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
