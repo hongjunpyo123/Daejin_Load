@@ -222,6 +222,7 @@
             <div class="bulletinboard">
                 <div class="card_container d-flex flex-row flex-wrap">
                 <h1>[게시판]</h1>
+
                     <?php
                 $sql = "SELECT * FROM bulletinboard WHERE title LIKE '%$search%' OR content LIKE '%$search%' ORDER BY id DESC;";
                 $result = $conn->query($sql);
@@ -246,6 +247,7 @@
                     <?php
             }
             ?>
+            
                 </div>
             </div>
             <div class="noticeboard">

@@ -8,14 +8,7 @@
         $num = $_SESSION['num'];
         $name = $_SESSION['name'];
         $today = date("Y/m/d");
-        $search = $_POST['search'] ?? '';
-
-        if(empty($search)){
-            $sql = "SELECT * FROM bulletinboard order by id desc";
-        }else{
-            $sql = "SELECT * FROM bulletinboard WHERE title LIKE '%$search%' OR content LIKE '%$search%' ORDER BY id DESC;";
-        }
-        $result = $conn->query($sql);
+        $search = $_GET['search'] ?? '';
 ?>
 
 <html>
@@ -159,6 +152,31 @@
                 display: none;
             }
 
+            #page_number{
+                text-align: center;
+                margin: 2px;
+                font-weight: 800;
+                text-decoration: none;
+                background-color: gray;
+                border-radius: 5px;
+                border: 2px solid black;
+                color: white;
+                width: 3%;
+                height: 10%;
+            }
+            #page_number_active{
+                text-align: center;
+                margin: 2px;
+                font-weight: 800;
+                text-decoration: none;
+                background-color: greenyellow;
+                border-radius: 5px;
+                border: 2px solid black;
+                color: white;
+                width: 3%;
+                height: 10%;
+            }
+
             .card-title{
                 text-align: center;
             }
@@ -189,8 +207,9 @@
             }
 
             .write{
+                top: 90%;
                 width: 99%;
-                justify-content: center;
+                justify-content: end;
 
             }
 
@@ -201,6 +220,15 @@
                 border-radius: 0px;
             }
 
+            #page_number{
+                width: 25px;
+                height: 25px;
+            }
+
+            #page_number_active{
+                width: 25px;
+                height: 25px;
+            }
             }
 
             @media (max-height:723px) {
@@ -228,7 +256,43 @@
         </style>
     </head>
     <body>
+        <?php
+        # PAGING
+        $list_size = 8;
+        $more_pages = 1;
+        $page = $_GET['page'] ?? 1;
 
+        if(empty($search)){
+            $sql = "select count(*) from bulletinboard"; //전체 게시글 숫자 받아오기
+        }else{
+            $sql = "select count(*) from bulletinboard WHERE title LIKE '%$search%' OR content LIKE '%$search%'"; //전체 게시글 숫자 받아오기
+        }
+        $result2 = $conn->query($sql);
+        $row2 = $result2->fetch_row();
+        $rowcnt = $row2[0];
+        
+        $pages = (int)($rowcnt / $list_size); //몇 페이지를 만들지
+        if($rowcnt % $list_size > 0){
+            $pages ++;
+        }
+
+        $start_page = max($page-$more_pages, 1);
+        $end_page = min($page + $more_pages, $pages);
+        $offset = ($page - 1) * $list_size; //건너뛸 게시물
+
+        if(empty($search)){
+            $sql = "SELECT * FROM bulletinboard order by id desc limit $offset, $list_size";
+        }else{
+            $sql = "SELECT * FROM bulletinboard WHERE title LIKE '%$search%' OR content LIKE '%$search%' ORDER BY id DESC limit $offset, $list_size;";
+        }
+        $result = $conn->query($sql);
+        if($result->num_rows <= 0){
+            $search = '';
+            echo "<script>alert('검색 결과가 없습니다!');</script>";
+            echo "<script>location.href='bulletinboard.php'</script>";
+        }
+
+        ?>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="main.php">Daejin-Load</a>
@@ -283,7 +347,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search" method="post" action="bulletinboard.php">
+                    <form class="d-flex" role="search" method="get" action="bulletinboard.php">
                         <input
                             class="form-control me-2"
                             type="search"
@@ -307,11 +371,6 @@
             <div class="card_container" onclick="">
                 <h1 style="width: 100%; text-align: center;" class="tip">TIP게시판!</h1>
                 <?php
-                    if($result->num_rows <= 0){
-                        $search = '';
-                        echo "<script>alert('검색 결과가 없습니다!');</script>";
-                        echo "<script>location.href='bulletinboard.php'</script>";
-                    }
                     while($row = $result->fetch_row()){
                         
                         ?>
@@ -348,7 +407,28 @@
                         <?php
                     }
                 ?>
-
+            </div>
+            <!-- 페이지 버튼 생성 -->
+            <div class="page_number_container d-flex justify-content-center">
+                <?php
+                    if($page > 1){
+                        ?>
+                            <a href="bulletinboard.php?page=<?=($page-1)?>&search=<?=$search?>" id='page_number'><</a>
+                        <?php
+                    }
+                    for($p = $start_page; $p <= $end_page; $p++){
+                        if($p == $page){
+                            echo "<a href='#' id='page_number_active'>$p</a>";
+                        } else{
+                            echo "<a href='bulletinboard.php?page=$p&search=$search' id='page_number'>$p</a>";
+                        }
+                    }
+                    if($page < $end_page){
+                        ?>
+                            <a href="bulletinboard.php?page=<?=($page+1)?>&search=<?=$search?>" id='page_number'>></a>
+                        <?php
+                    }
+                ?>
             </div>
 
             <div class="write">
