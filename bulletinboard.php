@@ -66,6 +66,13 @@
         # PAGING
         $list_size = 8;
         $more_pages = 1;
+
+        //모바일 버전 감지
+        if (isset($_SERVER['HTTP_USER_AGENT']) && strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false) {
+            $list_size = 3;
+            $more_pages = 2;
+          }
+
         $page = $_GET['page'] ?? 1;
 
         if(empty($search)){

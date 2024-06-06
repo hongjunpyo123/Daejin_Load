@@ -76,9 +76,11 @@
                 display: flex;
                 position: fixed;
                 width: 100%;
-                top: 93%;
+                bottom: 0;
                 justify-content: end;
+                height: 0;
             }
+
             .write button{
                 font-family: fantasy;
                 transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
@@ -174,6 +176,10 @@
                 border-radius: 0px;
             }
 
+            .page_number_container{
+                background-color: green !important;
+            }
+
             #page_number{
                 width: 25px;
                 height: 25px;
@@ -183,14 +189,9 @@
                 width: 25px;
                 height: 25px;
             }
-            }
 
-            @media (max-height:723px) {
 
             }
-
-
-
             @keyframes fadein {
                 from {
                     opacity: 0;
