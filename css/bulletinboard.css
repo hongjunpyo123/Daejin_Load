@@ -78,7 +78,6 @@
                 width: 100%;
                 bottom: 0;
                 justify-content: end;
-                height: 0;
             }
 
             .write button{
@@ -166,7 +165,6 @@
                 top: 90%;
                 width: 99%;
                 justify-content: end;
-
             }
 
             .card_container{

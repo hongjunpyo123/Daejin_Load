@@ -59,7 +59,38 @@
         <link rel="stylesheet" href="css/bulletinboard.css">
         
         <!--사진 조절 사이트 https://www.adobe.com/kr/express/feature/image/resize-->
+        <style>
+            .write1{
+                display: flex;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                justify-content: end;
+            }
 
+            .write1 button{
+                font-family: fantasy;
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+                left: 100%;
+                border-radius: 10px;
+                font-size: 15px;
+                padding: 5px;
+                background-color: rgba(75, 137, 0, 0.5);
+                color: black;
+                border: none;
+            }
+
+            .write1 button:hover{
+                transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+                background-color: rgba(75, 137, 220, 1);
+                color: white;
+            }
+            @media (max-width: 875px) {
+                .write1{
+                    display: none !important;
+                }
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -247,6 +278,9 @@
             <div class="write">
                 <a href="bulletinboardwrite.html"><button>TIP작성하기</button></a>
             </div>
+            <div class="write1">
+                <a href="bulletinboardwrite.html"><button>TIP작성하기</button></a>
+            </div>         
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
