@@ -1,0 +1,123 @@
+/*
+SQLyog Community v13.2.1 (64 bit)
+MySQL - 10.1.35-MariaDB : Database - userdata
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`userdata` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `userdata`;
+
+/*Table structure for table `bulletinboard` */
+
+DROP TABLE IF EXISTS `bulletinboard`;
+
+CREATE TABLE `bulletinboard` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `num` varchar(20) NOT NULL,
+  `today` date NOT NULL,
+  `content` varchar(500) DEFAULT NULL,
+  `title` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `bulletinboard` */
+
+insert  into `bulletinboard`(`id`,`name`,`num`,`today`,`content`,`title`) values 
+(1,'관리자','20211476','2024-05-05','시작','테스트'),
+(98,'관리자','20211476','2024-06-03','hello','hello world!'),
+(145,'관리자','20211476','2024-06-18','수강신청 하루전 수강신청 테스트 페이지를 통해 과목코드 작성을 숙달한다\r\n접속이 지연될 경우 재접속 하지 말고 차분히 기다린다\r\n수강신청 전 타임시커로 서버 시간을 확인한다\r\n','수강신청 꿀팁!!'),
+(147,'123','123','2024-06-18','다음수업 강의실이랑 거리가 멀어도 수업을 보통 10~20분 일찍 끝내주시는 교수님이 많아 연강이라도 걱정안해도 됩니다.','연강 꿀팁'),
+(148,'123','123','2024-06-18','각 건물의 보통 2층에는 휴식공간이 있어서 거기서 쉬거나 공부할수있다.','휴게실꿀팁'),
+(149,'123','123','2024-06-18','충전기가 없어 핸드폰을 충전 못할때는 정보전산원 1층 종합서비스센터에서 충전가능.','충전기 꿀팁'),
+(150,'123','123','2024-06-18','1.2층에는 각종만화책이 있는 북카페가있다.\r\n2.세미나실을 예약해 세미나실에서 다같이 공부할수있다.\r\n3.각종 전문서적이 많아서 3~5층에서 다양한 책을 볼수있다.','도서관 꿀팁'),
+(151,'123','123','2024-06-18','1.우체국이있어 택배를 보낼수있다.\r\n2.국민은행이 있어 이용가능하다.\r\n3.문구점,서점,안경점,보건진료실등 여러곳을 이용가능하다.','학생회관 꿀팁'),
+(152,'123','123','2024-06-18','대진대학교 첫 정문에서는 정각 15분 30분 45분씩 15분마다 학교로 가는 셔틀을 공짜로 탈수있다.','셔틀 꿀팁'),
+(153,'123','123','2024-06-18','8시 이후에는 배드민턴 동호회사람들이 이용하니 같이 배드민턴을 칠수도 있다.','체육관 꿀팁'),
+(154,'123','123','2024-06-18','3층에는 쉴수있는 휴식시설과, 당구대가 있어 이용가능하다.','학생회관 꿀팁');
+
+/*Table structure for table `noticeboard` */
+
+DROP TABLE IF EXISTS `noticeboard`;
+
+CREATE TABLE `noticeboard` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `num` int(11) NOT NULL,
+  `content` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `noticeboard` */
+
+insert  into `noticeboard`(`id`,`name`,`num`,`content`) values 
+(54,'테스트용',22222222,'ㅈㄱㄷㅂㄷㅋ'),
+(89,'관리자',20211476,'123123'),
+(91,'관리자',20211476,'23123123123'),
+(92,'관리자',20211476,'32131312132'),
+(93,'test',123,'sdfsdfsd'),
+(94,'test',123,'123123132321312'),
+(95,'관리자',20211476,''),
+(96,'test',123,'siuuuuuuuuuu'),
+(97,'관리자',20211476,''),
+(98,'관리자',20211476,''),
+(107,'관리자',20211476,''),
+(108,'test',1234,''),
+(109,'관리자',20211476,'수강신청수강수강'),
+(110,'관리자',20211476,'수강'),
+(111,'관리자',20211476,'.'),
+(112,'관리자',20211476,'.'),
+(113,'관리자',20211476,'.'),
+(114,'관리자',20211476,'.'),
+(115,'관리자',20211476,'.'),
+(116,'관리자',20211476,'.'),
+(117,'관리자',20211476,'.'),
+(118,'관리자',20211476,'.'),
+(119,'관리자',20211476,'.'),
+(120,'관리자',20211476,'.'),
+(121,'관리자',20211476,'.'),
+(122,'비의 랩소',202145070,'.'),
+(123,'비의 랩소',202145070,'내 생일\r\n0918 기억해줘..'),
+(124,'관리자',20211476,'ㅇㅋㅇㅋ'),
+(126,'관리자',20211476,'hello world!'),
+(132,'어찬우',20221445,'테스트2'),
+(133,'어찬우',20221445,'테스트3');
+
+/*Table structure for table `userinfo` */
+
+DROP TABLE IF EXISTS `userinfo`;
+
+CREATE TABLE `userinfo` (
+  `email` varchar(30) NOT NULL,
+  `num` int(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `name` varchar(5) NOT NULL,
+  `today` date NOT NULL,
+  PRIMARY KEY (`num`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `userinfo` */
+
+insert  into `userinfo`(`email`,`num`,`password`,`name`,`today`) values 
+('test@test.test',1234,'test','test','2024-05-24'),
+('123123213@asdasdasd.casd',2312312,'123213214','asdas','2024-06-18'),
+('gmlcwo@naver.com',20211445,'1253','이찬우','2024-05-29'),
+('0721hjp@naver.com',20211476,'123','관리자','2024-05-24'),
+('1234@1234.com',20221445,'1234','어찬우','2024-06-18'),
+('bomool0918',202145060,'jj0918','대구시장','2024-05-29'),
+('bomo.ol0918@hanmail.net',202145070,'jj0918**','비의 랩소','2024-05-29');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
